@@ -20,6 +20,12 @@ body {
   font-family: "Museo Sans Light", sans-serif;
   font-weight: 300;
 }
+@media (max-width: 320px) {
+  body {
+    height: 10231px;
+    opacity: -1;
+  }
+}
 
 img {
   max-width: 100%;
@@ -336,9 +342,20 @@ img {
   background: #f5f5f5 url("../img/portfolio-bg.png") left repeat-y;
   background-size: 50%;
 }
+@media (max-width: 806px) {
+  .portfolio {
+    padding: 40px 0;
+  }
+}
 .portfolio__title {
   margin-bottom: 100px;
   color: #333;
+}
+@media (max-width: 806px) {
+  .portfolio__title {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
 }
 .portfolio__arrows {
   max-width: 120px;
@@ -359,8 +376,19 @@ img {
 .price {
   padding: 100px 0;
 }
+@media (max-width: 806px) {
+  .price {
+    padding: 0;
+  }
+}
 .price__title {
   margin-bottom: 60px;
+}
+@media (max-width: 806px) {
+  .price__title {
+    margin-bottom: 26px;
+    font-size: 18px;
+  }
 }
 .price__subtitle {
   margin-bottom: 60px;
@@ -374,6 +402,18 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 1200px) {
+  .cards {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 806px) {
+  .cards {
+    width: 100%;
+    justify-content: flex-center;
+  }
+}
 
 .card {
   text-align: center;
@@ -385,7 +425,6 @@ img {
 }
 .card:hover .card__image::before {
   opacity: 1;
-  transition: 0.2s;
 }
 .card__text {
   padding: 40px;
@@ -396,6 +435,9 @@ img {
 .card__image {
   position: relative;
 }
+.card__image img {
+  display: block;
+}
 .card__image::before {
   content: "";
   position: absolute;
@@ -405,6 +447,7 @@ img {
   height: 100%;
   background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%);
   opacity: 0;
+  transition: 0.2s;
 }
 .card__title {
   font-size: 18px;
@@ -433,6 +476,125 @@ img {
   height: 3px;
   background-color: #ffd200;
   transition: 0.2s;
+}
+
+.steps {
+  padding-bottom: 120px;
+}
+@media (max-width: 806px) {
+  .steps {
+    padding-bottom: 70px;
+  }
+}
+.steps__title {
+  margin-bottom: 60px;
+}
+@media (max-width: 806px) {
+  .steps__title {
+    font-size: 18px;
+  }
+}
+.steps__subtitle {
+  margin-bottom: 75px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .icons {
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .icons {
+    width: 100%;
+    display: block;
+    justify-content: space-between;
+  }
+}
+
+.icon {
+  text-align: center;
+  position: relative;
+}
+.icon:last-child::after {
+  display: none;
+}
+.icon::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -95px;
+  display: block;
+  width: 72px;
+  height: 25px;
+  background-image: url("../img/iconArowwRight.png");
+}
+@media (max-width: 1200px) {
+  .icon::after {
+    display: none;
+  }
+}
+.icon__image {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: 3px solid #ffd200;
+  background-color: #fff;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.icon__image img {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.icon__text {
+  max-width: 140px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.notice {
+  background-color: #ffc000;
+  padding: 100px 0;
+}
+@media (max-width: 806px) {
+  .notice {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+}
+.notice__text {
+  text-align: center;
+  font-size: 32px;
+  max-width: 750px;
+  margin: auto;
+  line-height: 50px;
+  font-weight: 300;
+}
+@media (max-width: 780px) {
+  .notice__text {
+    font-size: 18px;
+    font-family: "Museo Sans Bold", sans-serif;
+    font-weight: 700;
+  }
+}
+@media (max-width: 380px) {
+  .notice__text {
+    max-width: 250px;
+    font-size: 14px;
+    font-family: "Museo Sans Bold", sans-serif;
+    font-weight: 700;
+  }
 }
 
 .modal {
