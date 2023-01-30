@@ -841,6 +841,12 @@ img {
   left: 0;
   top: 0;
 }
+@media (max-width: 768px) {
+  .map {
+    width: 100%;
+    position: relative;
+  }
+}
 
 .contacts {
   flex-basis: 50%;
@@ -857,6 +863,16 @@ img {
 .contacts-block {
   display: flex;
   justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  .contacts-block {
+    justify-content: center;
+  }
+}
+@media (max-width: 550px) {
+  .contacts-block {
+    display: block;
+  }
 }
 .contacts__title {
   font-family: "Museo Sans Bold", sans-serif;
